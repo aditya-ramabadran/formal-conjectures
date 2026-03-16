@@ -20,6 +20,7 @@ import FormalConjectures.Util.ProblemImports
 # Convergence of the Flint Hills and Cookson Hills series
 
 *References:*
+- [Wikipedia: Examples of numerical series](https://en.wikipedia.org/wiki/Series_(mathematics)#Examples_of_numerical_series)
 - [MathWorld: Flint Hills Series](https://mathworld.wolfram.com/FlintHillsSeries.html)
 - [Alekseyev, On the Flint Hills series](https://doi.org/10.48550/arXiv.1104.5100)
 - [MathWorld: Cookson Hills Series](https://mathworld.wolfram.com/CooksonHillsSeries.html)
@@ -28,7 +29,7 @@ import FormalConjectures.Util.ProblemImports
 namespace FlintCooksonHills
 
 /--
-The Flint Hills series summing $csc(n)^2 / n^3$ from n=1 to ∞ converges.
+The Flint Hills series summing $csc(n)^2 / n^3$ from $n=1$ to $\infty$ converges.
 (Note that we 0-index the series below.)
 -/
 @[category research open, AMS 40]
@@ -39,7 +40,7 @@ theorem flint_hills_series_converges :
   sorry
 
 /--
-The Cookson Hills series summing $sec(n)^2 / n^3$ from n=1 to ∞ converges.
+The Cookson Hills series summing $sec(n)^2 / n^3$ from $n=1$ to $\infty$ converges.
 -/
 @[category research open, AMS 40]
 theorem cookson_hills_series_converges :
