@@ -111,7 +111,7 @@ Do infinitely many pairs $(a, a+2)$ occur in Ulam's sequence? -/
 theorem erdos_342.parts.i :
     answer(sorry) ↔
       ∀ a : ℕ → ℕ, IsUlamSequence a →
-        ∀ N : ℕ, ∃ n ≥ N, (a (n + 1)) = (a n) + 2 := by
+        Set.Infinite {n : ℕ | ∃ m, a m = a n + 2} := by
   sorry
 
 /--
@@ -132,10 +132,7 @@ Part (iii), is the density of the sequence 0?
 theorem erdos_342.parts.iii :
     answer(sorry) ↔
       ∀ a : ℕ → ℕ, IsUlamSequence a →
-        Tendsto
-          (fun N : ℕ =>
-            (Finset.card (Finset.filter (fun n ↦ a n ≤ N) (Finset.range N)) : ℝ) / N)
-          atTop (𝓝 0) := by
+        Set.upperDensity (Set.range a) = 0 := by
   sorry
 
 end Erdos342
